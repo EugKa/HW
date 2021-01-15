@@ -1,0 +1,12 @@
+.advertisment-list {
+    background-color: burlywood;
+    max-width: 450px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.element{
+    &__image {
+        width: 100%;
+    }
+}

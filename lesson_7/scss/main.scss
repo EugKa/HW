@@ -1,0 +1,83 @@
+@mixin pageMargin {
+    margin: 0 10px;  
+}
+
+.airBnb-main {
+    display: flex;
+    justify-content: center;
+    
+    &__content {
+      max-width: 1220px;  
+    }
+}
+
+.airBnb-plus {
+    @include pageMargin;
+    padding-bottom: 48px;
+    &__title {
+        font-size: 22px;
+        font-weight: 400;
+        color: rgba(34, 34, 34, 1);
+        margin-bottom: 5px;
+    }
+    &__subt {
+        padding-bottom: 25px;
+
+    }
+
+    &__wrap {
+        background-image: url(../assets/images/1.png);
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-repeat: no-repeat;
+        
+        
+    }
+    &__logo {
+        padding-top: 56px;
+        padding-bottom: 30px;
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly; 
+        width: 174px;
+        height: 46px;
+        background: #FFFFFF;
+        border-radius: 4px;  
+        text-decoration: none;
+        color: black;
+        font-size: 10px;
+    }
+}
+
+.airBnbt-travelContent {
+    &__title {
+        font-size: 22px;
+        font-weight: 400;
+        color: rgba(34, 34, 34, 1);
+        padding-bottom: 5px;
+        @include pageMargin;
+
+    }
+    &__subt {
+        padding-bottom: 61px;
+        @include pageMargin;
+
+    }
+    &__cards {
+        
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .airBnb-plus{
+        &__wrap {
+            background-image: url(../assets/images/9.png);
+            background-position: center;
+            height: 376px;
+        }
+    }
+}

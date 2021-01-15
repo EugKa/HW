@@ -1,0 +1,39 @@
+.landing-header {
+    font-family: Noticia Text;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 187px;
+    padding-left: 126px;
+    padding-bottom: 73px;
+    padding-right: 118px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: flex-end;
+}
+
+.nav-menu__link {
+    padding: 12px;
+    color: rgba(97, 208, 212, 1);
+    text-decoration: none;
+}
+
+.nav-menu__link:hover {
+    color: #FFFFFF;
+    background-color: rgba(97, 208, 212, 1);
+}
+
+.title {
+    color: rgba(77, 77, 77, 1);
+    font-weight: 400;
+    
+}
+
+.title__name {
+    font-size: 43px;
+}
+
+.title__subt {
+    font-size: 18px;
+}

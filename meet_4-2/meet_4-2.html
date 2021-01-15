@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bace.css">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/meet_4-2.css">
+
+</head>
+
+<body>
+    <div class="page-content">
+        <header class="page-header">
+            <div class="page-header__wrap">
+                <nav class="nav" id="nav">
+                    <button class="nav__toggle" id="btn"></button>
+                    <ul class="nav__menu">
+                        <li class="nav__item">
+                            <a class="nav__link" href="">Store</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="">Contact us</a>
+                            <img class="nav__img" src="./assets/images/Star 1.png" alt="">
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <script>
+        const btn = document.querySelector('#btn');
+        const nav = document.querySelector('#nav');
+        btn.addEventListener('click', () => {
+            nav.classList.toggle('nav_active')
+        })
+    </script>
+</body>
+
+</html>

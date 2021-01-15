@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bace.css">
+    <link rel="stylesheet" href="./css/header.css">
+</head>
+
+<body>
+    <div class="airBnb">
+        <header class="airBnb-header">
+            <div class="airBnb-header__content content-wrap">
+                <nav class="navbar" id="navbar">
+                    <button class="navbar__toggle" id="btn"></button>
+                    <ul class="navbar__menu">
+                        <li class="navbar__item">
+                            <a class="navbar__link" href="">Shop</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__link" href="">Home</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__link" href="">About</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__link" href="">Contact us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="airBnb-dataPanel">
+            <div class="airBnb-form">
+                <div class="airBnb-form__title">
+                    <h1>Бронируйте уникальное жилье</h1>
+                </div>
+                <div class="airBnb-form__item">
+                    <p class="airBnb-form__txt">ГДЕ</p>
+                    <input class="airBnb-form__inputLarge" type="text">
+                </div>
+                <div class="airBnb-form__input-wrapper">
+                    <div class="airBnb-form__item">
+                        <p class="airBnb-form__txt">ПРИБЫТИЕ</p>
+                        <input class="airBnb-form__inputSmall" type="text">
+                    </div>
+                    <div class="airBnb-form__item">
+                        <p class="airBnb-form__txt">ВЫЕЗД</p>
+                        <input class="airBnb-form__inputSmall" type="text">
+                    </div>
+                </div>
+                <div class="airBnb-form__input-wrapper">
+                    <div class="airBnb-form__item">
+                        <p class="airBnb-form__txt">ВЗРОСЛЫЕ</p>
+                        <input class="airBnb-form__inputSmall" type="text">
+                    </div>
+                    <div class="airBnb-form__item">
+                        <p class="airBnb-form__txt">ДЕТИ</p>
+                        <input class="airBnb-form__inputSmall" type="text">
+                    </div>
+                </div>
+                <div class="airBnb-form__acceptBtn">
+                    <button class="airBnb-form__btn">Начать поиск</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        const btn = document.querySelector('#btn');
+        const navbar = document.querySelector('#navbar');
+        btn.addEventListener('click', () => {
+            navbar.classList.toggle('navbar_active')
+        })
+    </script>
+</body>
+
+</html>

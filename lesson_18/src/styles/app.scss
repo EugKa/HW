@@ -1,0 +1,16 @@
+.recipes-page {
+    padding: 0 30px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+    &__btn {
+        padding: 10px 20px;
+        background-color: deepskyblue;
+        color: #FFFF;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+}

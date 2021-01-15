@@ -1,0 +1,52 @@
+.modal {
+    width: 470px;
+    height: 348px;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(63, 78, 90, 0.108667);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 29px;
+}
+
+.modal__title {
+    font-size: 16px;
+    
+    padding-bottom: 12px;
+    padding-top: 46px;
+    color: rgba(50, 94, 130, 1);
+}
+
+.modal__subtitle {
+    color: rgba(50, 94, 130, 1);
+    font-size: 14px;
+    padding-bottom: 33px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal__links {
+    display: flex;
+    justify-content: space-between;
+    width: 351px;
+    padding-bottom: 50px;
+}
+
+.modal__link {
+    text-decoration: none;
+    color: rgba(85, 85, 85, 1);
+}
+
+.btn {
+    padding: 8px 29px;
+    background: rgba(37, 160, 212, 1);
+    color: #FFFFFF;
+    border-radius: 2px;
+}

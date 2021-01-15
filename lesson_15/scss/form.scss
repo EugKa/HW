@@ -1,0 +1,30 @@
+.form-advertisments {
+    max-width: 450px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFF;
+    &__field {
+        margin-top: 10px;
+    }
+    &__input {
+       padding: 10px 20px;
+       border: 1px solid black;
+       border-radius: 5px;
+    }
+    &__btn {
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        
+        &_submit {
+            background-color: rgb(56, 182, 6);
+        }
+        &_clear {
+            background-color: rgb(220, 20, 20);
+        }
+    }
+}

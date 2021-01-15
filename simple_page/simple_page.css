@@ -1,0 +1,176 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+  
+body,
+ul,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1,
+  p {
+    padding: 0;
+    margin: 0;
+}
+  
+ul,
+ol {
+    list-style: none;
+}
+  
+a {
+    text-decoration: none;
+    font-size: 15px;
+}
+
+body {
+    background-color: darkslategrey;
+}
+  
+.simple_page {
+    width: 1450px;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.header {
+    width: 943.61px;
+    height: 844.94px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.menu {
+    height: 164.89px;
+    border-bottom: 1px solid #828282;
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-end;
+}
+
+.link {
+    font-size: 18px;
+    color: #828282;
+    margin-bottom: 31.92px;
+}
+
+.link:hover {
+    color: black;
+}
+
+.content {
+    height: 188.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.name {
+    font-size: 47.34px;
+}
+
+.aside {
+    font-size: 18px;
+    color: black;
+}
+
+.languages {
+    display: flex;
+    transform: rotate(-90deg);
+    
+}
+.languages-link {
+    font-size: 18px;
+    color: #828282;
+}
+
+.languages-link:hover {
+    color: black;
+}
+
+.img {
+    height: 387px;
+}
+
+.main {
+    width: 1450px;
+    height: 506px;;
+    background: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.abuot-me {
+  width: 487px;
+  height: 218px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 691px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 342px;
+    height: 385px;
+    justify-content: space-evenly;
+}
+
+.ask {
+    text-align: center;
+}
+
+.btn {
+    height: 42px;
+    width: 180px;
+    color: #FFF;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: black;
+    border: none;
+}
+
+.social {
+    color: #828282;
+    width: 243.01px;
+    height:34.05px;
+    text-align: center;
+}
+
+.socila-link { 
+    color: #828282; 
+}
+
+.socila-link:hover { 
+    color: black; 
+}
+
+.wrap {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}

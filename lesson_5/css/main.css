@@ -1,0 +1,59 @@
+.landing-main {
+    font-family: Noticia Text;
+    padding-left: 126px;
+    padding-right: 118px;
+}
+
+.landing-main__profile {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    width: 430px;
+    color: rgba(77, 77, 77, 1);
+}
+
+.content__title {
+    font-size: 80px;
+}
+
+.content__subt {
+    font-size: 61.41px;
+    padding-bottom: 52px;
+}
+
+.content__txt {
+    font-size: 15px;
+    color: rgba(77, 77, 77, 1);
+    width: 417px;
+}
+
+.content__links {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 41px;
+}
+
+.content__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 64px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6);
+    color: #FFF;
+    text-decoration: none;
+}
+
+.content__link_my-resume {
+    background-color: rgba(232, 53, 86, 1);
+}
+
+.content__link_protfolio {
+    background-color: rgba(97, 208, 212, 1);
+}
+
+.content__link_blog {
+    background-color: rgba(209, 201, 38, 1);
+}

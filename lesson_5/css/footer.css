@@ -1,0 +1,27 @@
+.landing-footer {
+    position: absolute;
+    min-height: 137px;
+    bottom: 0;
+    background: #E83556;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    width: 902px;
+}
+
+.info__wrap {
+    display: flex;
+    align-items: center;
+}
+
+.info__txt {
+    color: #FFF;
+    padding-left: 21px;
+}
+

@@ -1,0 +1,82 @@
+.content-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+}
+.content-wrap {
+  max-width: 590px;
+  width: 100%;
+  height: 190px;
+}
+
+.widget {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 90px;
+  margin: 5px;
+  padding: 6px;
+}
+.widget__txt {
+  display: flex;
+  align-self: flex-start;
+}
+
+.widget-l {
+  display: flex;
+  height: 90px;
+  margin: 5px;
+  text-align: center;
+}
+.widget-l__txt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col_purp {
+  background-color: #af16b2;
+}
+
+.col_aqua {
+  background-color: #16b2a9;
+}
+
+.col_yellow {
+  background-color: #d09d18;
+}
+
+.col_green {
+  background-color: #16b24b;
+}
+
+.col_red {
+  background-color: #b21616;
+}
+
+.col_chartreuse {
+  background-color: #48d018;
+}
+
+.col_black {
+  background-color: #000c16;
+}
+
+@media screen and (max-width: 767px) {
+  .content-page {
+    height: 100%;
+  }
+
+  .widget-l__img {
+    display: none;
+  }
+  .widget-l__txt {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=meet_4.css.map */

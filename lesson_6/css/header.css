@@ -1,0 +1,179 @@
+.airBnb-header {
+  height: 60px;
+  background-color: #1b1b1b;
+}
+.airBnb-header__content {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar {
+  display: flex;
+}
+.navbar__toggle {
+  display: none;
+  position: relative;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+}
+.navbar__toggle::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #FFF;
+  position: absolute;
+  left: 0;
+  top: calc(33.3333% - 2px);
+}
+.navbar__toggle::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #FFF;
+  position: absolute;
+  left: 0;
+  bottom: calc(33.3333% - 2px);
+}
+.navbar__menu {
+  display: flex;
+}
+.navbar__item {
+  display: flex;
+  align-items: stretch;
+}
+.navbar__link {
+  display: flex;
+  align-items: center;
+  color: #FFF;
+  text-decoration: none;
+  font-size: 17px;
+  padding-left: 23px;
+}
+
+.airBnb-dataPanel {
+  background-image: url(../assets/images/Rectangle.png);
+  height: 1168px;
+}
+
+.airBnb-form {
+  position: absolute;
+  top: 406px;
+  left: 414px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 441px;
+  height: 475px;
+  background: #FFFFFF;
+  box-shadow: 0px 16px 40px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+.airBnb-form__title {
+  width: 377px;
+  color: #222222;
+  padding-bottom: 24px;
+}
+.airBnb-form__txt {
+  font-size: 12px;
+  color: #484848;
+}
+.airBnb-form__inputLarge {
+  width: 377px;
+  height: 48px;
+  border: 1px solid #EBEBEB;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+.airBnb-form__input-wrapper {
+  display: flex;
+}
+.airBnb-form__inputSmall {
+  width: 188px;
+  height: 48px;
+  border: 1px solid #EBEBEB;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+.airBnb-form__acceptBtn {
+  margin-top: 10px;
+  width: 377px;
+  display: flex;
+  justify-content: flex-end;
+}
+.airBnb-form__btn {
+  width: 153px;
+  height: 48px;
+  background: #FF5A5F;
+  border-radius: 4px;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 767px) {
+  .airBnb {
+    width: 100%;
+  }
+
+  .airBnb-header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .navbar {
+    align-items: center;
+  }
+  .navbar__toggle {
+    display: block;
+    margin-right: 5px;
+  }
+  .navbar__menu {
+    height: calc(100vh - 60px);
+    background-color: #242424;
+    position: absolute;
+    width: 250px;
+    top: 60px;
+    left: -250px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translateX(0%);
+    visibility: hidden;
+    transition: all 0.2s;
+  }
+  .navbar__item {
+    padding: 15px 0;
+    margin: 0;
+  }
+  .navbar_active .navbar__menu {
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  .navbar_active .navbar__toggle::after {
+    top: calc(50% - 1px);
+    transform: rotate(45deg);
+  }
+  .navbar_active .navbar__toggle::before {
+    bottom: calc(50% - 1px);
+    transform: rotate(-45deg);
+  }
+
+  .airBnb-dataPanel {
+    margin-top: 60px;
+    width: 100%;
+    height: 339px;
+    background-size: 158%;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  .airBnb-form {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

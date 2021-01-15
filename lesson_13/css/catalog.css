@@ -1,0 +1,19 @@
+.card {
+  height: 400px;
+  background-color: #bdbdbd;
+  margin: 14px 10px;
+}
+.card__img {
+  width: 100%;
+}
+.card__content {
+  padding: 10px;
+}
+.card__title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: brown;
+}
+
+/*# sourceMappingURL=catalog.css.map */

@@ -1,0 +1,91 @@
+.lamp-page {
+    height: 100vh;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#lamp {
+    padding-bottom: 20px;
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+    &_red {
+        background-color: red;
+    }
+    &_green {
+        background-color: green;
+    }
+    &_yellow {
+        background-color: yellow;
+    }
+    &_blue {
+        background-color: blue
+    }
+    &_orange {
+        background-color: orange;
+    }
+    &_brown {
+        background-color: brown;
+    }
+    &_purple {
+        background-color: purple;
+    }
+    &_aqua{
+        background-color: aqua;
+    }
+    &_burlywood {
+        background-color: burlywood;
+    }
+    &_darkgoldenrod {
+        background-color: darkgoldenrod;
+    }
+    &_fuchsia {
+        background-color: fuchsia;
+    }
+    &_cornflowerblue {
+        background-color: cornflowerblue;
+    }
+    &_orangered{
+        background-color: orangered;
+    }
+    &_darkred {
+        background-color: darkred;
+    }
+    &_lime {
+        background-color: lime;
+    }
+    &_teal {
+        background-color: teal;
+    }
+    &_navy {
+        background-color: navy;
+    }
+    &_indigo {
+        background-color: indigo;
+    }
+    &_mediumvioletred {
+        background-color: mediumvioletred;
+    }
+    &_oldlace {
+        background-color: rgb(255, 223, 163);
+    }
+
+
+}
+.title {
+    cursor: pointer;
+}
+
+.text {
+    height: 0;
+    opacity: 0;
+    &.active {
+        height: 100%;
+        opacity:1;
+    }
+}

@@ -1,0 +1,37 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+  }
+
+body {
+    padding: 8px;
+    margin: 0;
+    background: #efefef;
+}
+
+.info {
+    text-align: right;
+}
+
+.about {
+    text-align: center;
+}
+
+h1 {
+    font-size: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 300px;
+    margin-bottom: 0;
+}
+  
+.year {
+    margin-top: 400px;
+    text-align: center;
+}
+

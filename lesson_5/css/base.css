@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+  }
+  
+  body,
+  ul,
+  ol,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul,
+  ol {
+    list-style: none;
+    padding: 0;
+  }
+  
+  input,
+  button {
+    border: none;
+  }
+  
+  body {
+    background: #FFFFFF;
+  }
+
+.landing-page {
+    min-width: 1200px;
+    background: #FFFFFF;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 137px;
+   
+    
+}
