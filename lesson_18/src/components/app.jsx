@@ -10,7 +10,7 @@ export class App extends React.Component {
     }
 
 
-    onClickHandler() {
+    fetchData() {
         fetch('https://www.themealdb.com/api/json/v1/1/random.php')
             .then(response => response.json())
             .then(data => this.setState({ meals: data.meals }));
@@ -25,9 +25,10 @@ export class App extends React.Component {
                     <h4 className='header__sub-title'>Get a random meal by clicking below</h4>
                     <button
                         className='header__btn'
-                        onClick={() => this.onClickHandler()}>
+                        onClick={() => this.fetchData()}>
                         Get Meal 🍔
-                    </button></header>
+                    </button>
+                </header>
                 <Content meals={this.state.meals} />
             </div>
         )
