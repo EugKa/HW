@@ -1,0 +1,149 @@
+@mixin  toggleBar {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #FFF;
+    position: absolute;
+    left: 0;
+}
+.page-content {
+    background-color: rgba(255, 166, 0, 0.39);
+    height: 100vh;
+    width: 100%;
+    
+    
+}
+
+.header {
+    background-color: #252128;
+    width: 100%;
+    height: 90px;
+    // position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-menu {
+    display: flex;
+    &__toggle-line {
+        transform: rotate(180deg);
+        width: 100%;
+        height: 2px;
+        border: 1px solid#FFF;
+        display: flex;
+    }
+    &__toggle {
+        display: none;
+        position: relative;
+        background: transparent;
+        width: 40px;
+        height: 40px;
+        z-index: 1;
+        
+        &::after {
+            @include toggleBar;
+            top: #{calc(20% - 2px)};
+            
+        }
+        &::before {
+            @include toggleBar;
+            bottom: #{calc(20% - 2px)};
+            
+        }
+        
+    }
+    
+    &__list {
+        display: flex;
+    }
+    
+    &__item {
+        color: #FFF;
+        padding: 10px;
+        
+        cursor: pointer;
+    }
+    &__item:hover {
+        color: orangered;
+    }
+    &__login-btn {
+        color: orangered;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        cursor: pointer;
+        margin-left: 40px;
+        
+    }
+    &__ligin-icon {
+        margin-right: 10px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+    .header {
+        justify-content: flex-end;
+        width: 100%;
+    }
+    .nav-menu {
+        margin-right: 30px;
+        &__toggle {
+            display: block;
+        }
+        &__list {
+            background-color: #252128;
+            height: 100vh;
+            width: 80%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            visibility: hidden;
+            transition: all 0.3s;
+            transform: translateX(100%);
+            
+        }
+        &__item {
+            margin-right: 20px;
+            
+        }
+        &__login-btn {
+            margin-right: 30px;
+            order: -1;
+            margin-bottom: 30px;
+        }
+        &.active {
+            .nav-menu {
+                &__toggle-line {
+                    visibility: hidden;
+                }
+                &__toggle {
+                    &::after {
+                        top: #{calc(50% - 1px)};
+                        transform: rotate(45deg);
+                        transition: all 0.3s;
+                    }
+                    &::before {
+                      bottom:  #{calc(50% - 1px)};
+                      transform: rotate(-45deg);
+                      transition: all 0.3s;
+                    }
+                }
+                &__list{
+                    visibility: visible;
+                    transform: translateX(0);
+                }
+                
+            }
+        }
+    }
+}
