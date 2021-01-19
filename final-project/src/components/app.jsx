@@ -6,10 +6,10 @@ import '../styles/fontawesome-free-5.15.1-web/scss/fontawesome.scss';
 
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
-import { Home } from './home'
-import { Traning } from './traning'
-import { About } from './about'
-import { Winnings } from './winnings'
+// import { Home } from './home'
+// import { Traning } from './traning'
+// import { About } from './about'
+// import { Winnings } from './winnings'
 
 export class App extends React.Component {
     state = {
