@@ -1,17 +1,34 @@
 .home {
     margin-top: 90px;
-    height: 1080px;
-    background-size: 100%;
+    height: 100%;
+    
     &__wrapper {
         width: 100%;
-        height: 100%;
-        background: no-repeat url(https://static.wixstatic.com/media/ff6bf6_1e7fa400b61f4eb0b3f5cb5bca3fb2bc.jpg/v1/fill/w_1055,h_1080,al_c,q_85/ff6bf6_1e7fa400b61f4eb0b3f5cb5bca3fb2bc.webp);
-        background-size: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__img {
+        width: 100%;
     }
 
     &__content {
         color: #FFF;
-        
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+    &__btn {
+        padding: 20px 40px;
+        color: #FE6148;
+        background-color: #252128;
+        text-decoration: none;
+    }
+    &__btn:hover {
+        color: #252128;
+        background-color: #FE6148;
     }
 
 }
@@ -19,12 +36,9 @@
 
 @media screen and (max-width: 767px) {
     .home {
-        
-        
-        
+        margin-top: -1px;
         &__wrapper {
-            width: 100%;
-        height: 100%;
+            
         }
     }
     

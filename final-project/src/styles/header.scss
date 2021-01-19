@@ -7,6 +7,11 @@
     left: 0;
 }
 
+.page {
+    
+    overflow: hidden;
+    
+}
 .header {
     background-color: #252128;
     width: 100%;
@@ -21,6 +26,7 @@
 }
 
 .nav-menu {
+    width: 100%;
     display: flex;
     &__toggle-line {
         transform: rotate(180deg);
@@ -28,6 +34,7 @@
         height: 2px;
         border: 1px solid#FFF;
         display: flex;
+        
     }
     &__toggle {
         display: none;
@@ -36,7 +43,8 @@
         width: 40px;
         height: 40px;
         z-index: 1;
-        
+        padding: 0;
+        outline: none;
         &::after {
             @include toggleBar;
             top: #{calc(20% - 2px)};
@@ -52,11 +60,14 @@
     
     &__list {
         display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-evenly;
     }
     
     &__item {
         color: #FFF;
-        padding: 10px;
+        
         cursor: pointer;
     }
     &__item:hover {
@@ -84,9 +95,11 @@
     .header {
         justify-content: flex-end;
         width: 100%;
+        position: relative;
 
     }
     .nav-menu {
+        justify-content: flex-end;
         margin-right: 30px;
         &__toggle {
             display: block;
@@ -108,6 +121,7 @@
         }
         &__item {
             margin-right: 20px;
+            padding: 10px;
             
         }
         &__login-btn {
