@@ -6,24 +6,18 @@
     position: absolute;
     left: 0;
 }
-.page-content {
-    background-color: rgba(255, 166, 0, 0.39);
-    height: 100vh;
-    width: 100%;
-    
-    
-}
 
 .header {
     background-color: #252128;
     width: 100%;
     height: 90px;
-    // position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .nav-menu {
@@ -63,7 +57,6 @@
     &__item {
         color: #FFF;
         padding: 10px;
-        
         cursor: pointer;
     }
     &__item:hover {
@@ -91,6 +84,7 @@
     .header {
         justify-content: flex-end;
         width: 100%;
+
     }
     .nav-menu {
         margin-right: 30px;
