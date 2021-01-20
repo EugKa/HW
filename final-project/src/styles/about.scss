@@ -1,0 +1,15 @@
+.about {
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &__link {
+        text-decoration: none;
+    }
+    &__logo {
+        width: 20px;
+        height: 20px;
+        color: black;
+    }
+}
