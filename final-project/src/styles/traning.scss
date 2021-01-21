@@ -1,3 +1,4 @@
+@import './mixins';
 .traning {
    display: flex;
    &__type {
@@ -36,6 +37,7 @@
    
     &__title {
         padding-bottom: 20px;
+        @include font3;
     }
     &__link {
         text-decoration: none;

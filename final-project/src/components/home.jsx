@@ -3,6 +3,7 @@ import '../styles/grid.scss'
 import '../styles/home.scss'
 
 
+
 export class Home extends React.Component {
 
     render() {

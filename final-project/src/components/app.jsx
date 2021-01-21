@@ -9,7 +9,10 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { Home } from './home'
 import { Traning } from './traning'
 import { About } from './about'
-// import { Winnings } from './winnings'
+import { Winnings } from './winnings'
+import { Studio } from './studio'
+import { Mobile } from './mobile'
+import { Footer } from './footer'
 
 export class App extends React.Component {
     state = {
@@ -54,7 +57,10 @@ export class App extends React.Component {
                 <Home />
                 <Traning />
                 <About />
-                {/* <Winnings /> */}
+                <Winnings />
+                <Studio />
+                <Mobile />
+                <Footer />
             </div>
         )
     }
