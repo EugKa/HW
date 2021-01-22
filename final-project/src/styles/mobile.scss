@@ -1,4 +1,73 @@
 .mobile {
     height: 583px;
-    background-color: rgba(47, 43, 50, 1)
+    background-color: rgba(47, 43, 50, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__wrapper {
+        width: 575px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.mobile-join {
+    color: #FFF;
+    width: 333px;display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__subt {
+        text-align: center;
+    }
+    &__form {
+        display: flex;
+    }
+    &__input {
+        padding: 10px;
+        background-color: rgb(34, 31, 37);
+        border: 2px solid white;
+        margin-right: 10px;
+    }
+    &__input-country {
+        width: 54px;
+
+    }
+    &__input-phone {
+        width: 140px;
+    }
+    &__btn {
+        padding: 12px 44px;
+        background-color: rgba(254,97,72,1);
+    }
+    &__links {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mobile {
+        &__wrapper {
+
+        }
+    }
+    .mobile-screen {
+        display: none;
+    }
+
+    .mobile-join {
+        width: 100%;
+        &__caption {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__form {
+            display: none;
+        }
+        &__subt {
+            width: 60%;
+            
+        }
+    }
 }

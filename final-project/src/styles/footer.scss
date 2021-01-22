@@ -1,4 +1,79 @@
+@import './mixins.scss';
 .footer {
     background-color: #fe6148;
     height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+
+.footer-contacts {
+    
+    color: #252128;
+    &__title {
+        @include font7;
+        font-weight: normal;
+    }
+    &__txt {
+        @include font8;
+        font-weight: normal;
+    }
+    &__img {
+        width: 32px;
+        height: 32px;
+        display: block;
+    }
+    &__links {
+        display: flex;
+    }
+}
+
+.footer-form {
+    &__aside {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    
+    &__input {
+        border: 2px solid black;
+        background-color: #fe6148;
+        color: black;
+        width: 412px;
+        margin-bottom: 10px;
+        height: 38px;
+        padding: 3px 3px 3px 12px;
+    }
+    &__input_massage {
+        height: 95px;
+        padding: 15px 10px 3px 16px;
+    }
+    &__btn {
+        width: 142px;
+        height: 38px;
+        background-color: #252128;
+        color: #fe6148;
+        align-self: flex-end;
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+    .footer {
+        flex-direction: column;
+        align-items: inherit;
+        height: 793px;
+        padding: 15px;
+    }
+    .form {
+        align-items: center;
+        &__input {
+            width: 100%;
+        }
+    }
 }

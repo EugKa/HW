@@ -49,3 +49,26 @@
     font-style: normal;
 }
 
+@mixin font6 {
+    font-family: 'Oswald', sans-serif; 
+    font-size: 88px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 0.25em;
+}
+
+@mixin font7 {
+    font-family: 'Oswald', sans-serif; 
+    font-size: 32px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 0.4em;
+}
+
+@mixin font8 {
+    font-family: 'Oswald', sans-serif; 
+    font-size: 26px;
+    font-weight: bold;
+    font-style: normal;
+}
+
