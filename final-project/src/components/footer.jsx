@@ -1,39 +1,44 @@
 import React from 'react';
 import '../styles/footer.scss';
-import facebook from '../assets/facebook2.png'
-import twitter from '../assets/twitter2.png'
-import instagram from '../assets/instagram2.png'
+import facebook from '../assets/facebook2.png';
+import twitter from '../assets/twitter2.png';
+import instagram from '../assets/instagram2.png';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+
+import { Link } from "react-scroll";
 
 export class Footer extends React.Component {
     render() {
         return (
             <footer className="footer">
                 <div className="footer-contacts">
-                    <div className="footer-contacts__title">CONTACT ME</div>
-                    <div className="footer-contacts__txt">
-                        <p>
-                            WRITE OR CALL ME IF YOU
-                        </p>
-                        <p>
-                            HAVE MORE QUESTIONS
-                        </p>
-                    </div>
-                    <div className="footer-contacts__txt">
-                        <p>
-                            INFO@MYSITE.COM
-                        </p>
-                        <p>
-                            123-456-7890
-                        </p>
+                    <div className="footer-contacts__info">
+                        <div className="footer-contacts__title">CONTACT ME</div>
+                        <div className="footer-contacts__txt">
+                            <p>
+                                WRITE OR CALL ME IF YOU
+                                </p>
+                            <p>
+                                HAVE MORE QUESTIONS
+                                </p>
+                        </div>
+                        <div className="footer-contacts__txt">
+                            <p>
+                                INFO@MYSITE.COM
+                                </p>
+                            <p>
+                                123-456-7890
+                                </p>
+                        </div>
                     </div>
                     <div className="footer-contacts__links">
-                        <a href="https://www.facebook.com/wix">
+                        <a className="footer-contacts__link" href="https://www.facebook.com/wix">
                             <img className="footer-contacts__img" src={facebook} alt="" />
                         </a>
-                        <a href="https://twitter.com/wix">
+                        <a className="footer-contacts__link" href="https://twitter.com/wix">
                             <img className="footer-contacts__img" src={twitter} alt="" />
                         </a>
-                        <a href="https://www.instagram.com/wix/">
+                        <a className="footer-contacts__link" href="https://www.instagram.com/wix/">
                             <img className="footer-contacts__img" src={instagram} alt="" />
                         </a>
                     </div>
@@ -47,7 +52,15 @@ export class Footer extends React.Component {
                         <button className="form__btn" type="submit">Submit</button>
                     </form>
                     <div className="footer-form__aside">
-                        <a href="http://">Up</a>
+                        <Link activeClass="active"
+                            to="home"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                            className="footer-form__link">
+                            <ExpandLessIcon fontSize="large" />
+                        </Link>
                         <div className="footer-form__created">
                             ©2023 BY JOEY DIXON. PROUDLY CREATED WITH
                         </div>

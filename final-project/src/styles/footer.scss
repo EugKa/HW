@@ -9,15 +9,21 @@
 
 
 .footer-contacts {
-    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     color: #252128;
     &__title {
         @include font7;
         font-weight: normal;
+        margin-bottom: 58px;
+        margin-top: 68px;
     }
     &__txt {
         @include font8;
         font-weight: normal;
+        margin-bottom: 20px;
     }
     &__img {
         width: 32px;
@@ -27,12 +33,22 @@
     &__links {
         display: flex;
     }
+    &__link:nth-child(2) {
+        margin: 0 12px;
+    }
 }
 
 .footer-form {
+    display: flex;
+    flex-direction: column;
+    
     &__aside {
         display: flex;
         justify-content: space-between;
+        margin-top: 25px;
+    }
+    &__link {
+        cursor: pointer;
     }
 }
 
@@ -44,13 +60,14 @@
         border: 2px solid black;
         background-color: #fe6148;
         color: black;
-        width: 412px;
+        width: 431px;
         margin-bottom: 10px;
         height: 38px;
         padding: 3px 3px 3px 12px;
     }
     &__input_massage {
-        height: 95px;
+        
+        height: 115px;
         padding: 15px 10px 3px 16px;
     }
     &__btn {

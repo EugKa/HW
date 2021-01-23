@@ -22,10 +22,13 @@
         align-items: center; 
     }
     &__title {
+        margin-bottom: 25px;
         @include font1;
     }
     &__subt {
+        margin-bottom: 67px;
         @include font2;
+        text-align: center;
     }
     &__btn {
         padding: 20px 40px;

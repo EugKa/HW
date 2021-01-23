@@ -6,6 +6,8 @@ import '../styles/fontawesome-free-5.15.1-web/scss/fontawesome.scss';
 
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
+import { Link } from "react-scroll";
+
 import { Home } from './home'
 import { Traning } from './traning'
 import { About } from './about'
@@ -40,27 +42,86 @@ export class App extends React.Component {
                             <span className="nav-menu__toggle-line"></span>
                         </button>
                         <ul className="nav-menu__list">
-                            <li className="nav-menu__item">HOME</li>
-                            <li className="nav-menu__item">TRANING</li>
-                            <li className="nav-menu__item">ABOUT</li>
-                            <li className="nav-menu__item">WINNINGS</li>
-                            <li className="nav-menu__item">THE STUDIO</li>
+                            <li className="nav-menu__item">
+                                <Link activeClass="active"
+                                    to="home"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}>HOME
+                                </Link>
+                            </li>
+                            <li className="nav-menu__item">
+                                <Link activeClass="active"
+                                    to="traning"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                >TRANING
+                                </Link>
+                            </li>
+                            <li className="nav-menu__item">
+                                <Link
+                                    activeClass="active"
+                                    to="about"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                >ABOUT
+                                </Link>
+                            </li>
+                            <li className="nav-menu__item">
+                                <Link
+                                    activeClass="active"
+                                    to="winnings"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                >WINNINGS
+                                </Link>
+                            </li>
+                            <li className="nav-menu__item">
+                                <Link
+                                    activeClass="active"
+                                    to="studio"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                >THE STUDIO
+                                </Link>
+                            </li>
                             <li className="nav-menu__item">BOOK ONLINE</li>
                             <li className="nav-menu__item">PLANS</li>
-                            <li className="nav-menu__item">CONTACT</li>
+                            <li className="nav-menu__item">
+                                <Link
+                                    activeClass="active"
+                                    to="footer"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                >CONTACT
+                                </Link>
+                            </li>
                             <button className="nav-menu__login-btn">Log in
                             <AccountCircleIcon style={{ fontSize: 30 }} className="nav-menu__ligin-icon" />
                             </button>
                         </ul>
                     </nav>
                 </header>
-                <Home />
-                <Traning />
-                <About />
-                <Winnings />
-                <Studio />
-                <Mobile />
-                <Footer />
+                <main className="main">
+                    <Home id="home" />
+                    <Traning id="traning" />
+                    <About id="about" />
+                    <Winnings id="winnings" />
+                    <Studio id="studio" />
+                    <Mobile id="mobile" />
+                </main>
+                <Footer id="footer" />
             </div>
         )
     }
