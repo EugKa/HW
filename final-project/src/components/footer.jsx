@@ -57,7 +57,6 @@ export class Footer extends React.Component {
                             spy={true}
                             smooth={true}
                             offset={-70}
-                            duration={500}
                             className="footer-form__link">
                             <ExpandLessIcon fontSize="large" />
                         </Link>

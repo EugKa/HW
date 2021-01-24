@@ -6,7 +6,14 @@ import '../styles/fontawesome-free-5.15.1-web/scss/fontawesome.scss';
 
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
-import { Link } from "react-scroll";
+import {
+    HashRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+
+
 
 import { Home } from './home'
 import { Traning } from './traning'
@@ -15,11 +22,16 @@ import { Winnings } from './winnings'
 import { Studio } from './studio'
 import { Mobile } from './mobile'
 import { Footer } from './footer'
+import { Book } from './book'
+import { Plans } from './plans'
+
 
 export class App extends React.Component {
+
     state = {
         activeMenu: false,
     }
+
 
     onToggleMenu = () => {
         this.setState(({ activeMenu }) => {
@@ -28,101 +40,71 @@ export class App extends React.Component {
             }
         })
     }
+
+
+
     render() {
         let navList = 'nav-menu'
         if (this.state.activeMenu) {
             navList += ' active'
         }
         return (
-            <div className="page">
-
-                <header className="header">
-                    <nav className={navList}>
-                        <button onClick={this.onToggleMenu} className="nav-menu__toggle">
-                            <span className="nav-menu__toggle-line"></span>
-                        </button>
-                        <ul className="nav-menu__list">
-                            <li className="nav-menu__item">
-                                <Link activeClass="active"
-                                    to="home"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-70}
-                                    duration={500}>HOME
-                                </Link>
-                            </li>
-                            <li className="nav-menu__item">
-                                <Link activeClass="active"
-                                    to="traning"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-70}
-                                    duration={500}
-                                >TRANING
-                                </Link>
-                            </li>
-                            <li className="nav-menu__item">
-                                <Link
-                                    activeClass="active"
-                                    to="about"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-70}
-                                    duration={500}
-                                >ABOUT
-                                </Link>
-                            </li>
-                            <li className="nav-menu__item">
-                                <Link
-                                    activeClass="active"
-                                    to="winnings"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-70}
-                                    duration={500}
-                                >WINNINGS
-                                </Link>
-                            </li>
-                            <li className="nav-menu__item">
-                                <Link
-                                    activeClass="active"
-                                    to="studio"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-70}
-                                    duration={500}
-                                >THE STUDIO
-                                </Link>
-                            </li>
-                            <li className="nav-menu__item">BOOK ONLINE</li>
-                            <li className="nav-menu__item">PLANS</li>
-                            <li className="nav-menu__item">
-                                <Link
-                                    activeClass="active"
-                                    to="footer"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-70}
-                                    duration={500}
-                                >CONTACT
-                                </Link>
-                            </li>
-                            <button className="nav-menu__login-btn">Log in
-                            <AccountCircleIcon style={{ fontSize: 30 }} className="nav-menu__ligin-icon" />
+            <Router>
+                <div className="page">
+                    <header className="header">
+                        <nav className={navList}>
+                            <button onClick={this.onToggleMenu} className="nav-menu__toggle">
+                                <span className="nav-menu__toggle-line"></span>
                             </button>
-                        </ul>
-                    </nav>
-                </header>
-                <main className="main">
-                    <Home id="home" />
-                    <Traning id="traning" />
-                    <About id="about" />
-                    <Winnings id="winnings" />
-                    <Studio id="studio" />
-                    <Mobile id="mobile" />
-                </main>
-                <Footer id="footer" />
-            </div>
+                            <ul className="nav-menu__list">
+
+                                <li className="nav-menu__item"><Link to="/">Home</Link></li>
+                                <li className="nav-menu__item"><Link to="/">TRANING</Link></li>
+                                <li className="nav-menu__item"><Link to="/">ABOUT</Link></li>
+                                <li className="nav-menu__item"><Link to="/">WINNINGS</Link></li>
+                                <li className="nav-menu__item"><Link to='/'
+
+                                >THE STUDIO</Link></li>
+                                <li>
+                                    <Link className="nav-menu__item" to="/book" >BOOK ONLINE</Link>
+                                </li>
+                                <li>
+                                    <Link className="nav-menu__item" to="/plans" >PLANS</Link>
+                                </li>
+                                <li className="nav-menu__item">CONTACT</li>
+                                <button className="nav-menu__login-btn">Log in
+                            <AccountCircleIcon style={{ fontSize: 30 }} className="nav-menu__ligin-icon" />
+                                </button>
+                            </ul>
+                        </nav>
+                    </header>
+
+                    <Switch>
+
+
+                        <Route exact path="/">
+                            <Home name="home" />
+                            <Traning id="traning" />
+                            <About name="about" />
+                            <Winnings id="winnings" />
+                            <Studio id="studio" />
+                            <Mobile name="mobile" />
+                        </Route>
+
+
+
+                        <Route path="/book">
+                            <Book />
+                        </Route>
+                        <Route path="/plans">
+                            <Plans />
+                        </Route>
+                    </Switch>
+
+
+                    <Footer id="footer" />
+                </div>
+            </Router>
         )
     }
 }
