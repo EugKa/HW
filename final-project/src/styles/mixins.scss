@@ -12,6 +12,14 @@
 
 // font-family: 'Fira Sans Condensed', sans-serif;
 
+@mixin backColorOrange {
+    background-color: rgba(254,97,72,1);
+    color: rgba(255,255,255,1);
+}
+@mixin backColorDark {
+    background-color: rgba(37,33,40,1);
+}
+
 @mixin font1 {
     font-family: 'Oswald', sans-serif; 
     font-size: 88px;
@@ -71,4 +79,27 @@
     font-weight: bold;
     font-style: normal;
 }
+
+
+@mixin font9 {
+    font-family: 'Oswald', sans-serif; 
+    font-size: 133px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin font10 {
+    font-family: 'Oswald', sans-serif; 
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin font11 {
+    font-family: 'Oswald', sans-serif; 
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+}
+
 

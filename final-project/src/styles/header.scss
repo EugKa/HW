@@ -90,6 +90,7 @@
 
 
 @media screen and (max-width: 767px) {
+    
     .header {
         justify-content: flex-end;
         width: 100%;
@@ -128,7 +129,9 @@
             margin-bottom: 30px;
         }
         &.active {
-            
+            #root {
+                position: fixed;
+            }
             .nav-menu {
                 &__toggle-line {
                     visibility: hidden;
