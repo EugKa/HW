@@ -68,10 +68,24 @@
 }
 
 .winnings-gallery {
+    &__link {
+        text-decoration: none;
+        color:rgb(37, 33, 40);
+        
+    }
     &__img {
         width: 100%;
         height: 100%;
         display: block;
+    }
+    &__overlay {
+        width: 100%;
+        padding: 30px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        background-color: #ffffff87;
     }
 }
 

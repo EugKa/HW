@@ -7,9 +7,7 @@ import { WinGallery } from './winnings-gallery'
 
 export class Winnings extends React.Component {
     render() {
-        const { winData } = this.props;
-        console.log(winData.winInfo);
-        console.log(winData.winGallery);
+        const { winData, mouseEnter, mouseLeave, opacity } = this.props;
         return (
             <div className="winnings">
                 <div className="winnings-info">
@@ -18,23 +16,30 @@ export class Winnings extends React.Component {
                         <h1 className="winnings-info__title">WINNINGS</h1>
                         <ul className="winnings-info__container grid">
                             {winData.winInfo.map(item => {
-                                return <WinInfo {...item} key={item.id} />
+                                return <WinInfo
+                                    {...item}
+                                    key={item.id}
+                                />
                             })}
                         </ul>
                     </div>
                 </div>
-
                 <div className="winnings-start">
                     <div className="winnings-start__conteiner">
                         <h1 className="winnings-start__title">START TRAINING TODAY</h1>
                         <a className="winnings-start__link" href="http://">Book a Session</a>
                     </div>
                 </div>
-
                 <div className="winnings-gallery">
                     <ul className="winnings-gallery__links grid">
                         {winData.winGallery.map(pic => {
-                            return <WinGallery {...pic} key={pic.id} />
+                            return <WinGallery
+                                {...pic}
+                                key={pic.id}
+                                mouseEnter={() => mouseEnter(pic.id)}
+                                mouseLeave={() => mouseLeave(pic.id)}
+                                opacity={opacity}
+                            />
                         })}
                     </ul>
                 </div>
