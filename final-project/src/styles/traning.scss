@@ -2,28 +2,27 @@
 .traning {
    display: flex;
    &__type {
-       position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
    }
-   &__type::after {
-    content: '';
-    background-color: #FE6148;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-   }
-   &__type:hover::after {
-    opacity: 0.5;
-   }
+//    &__type: {
+//     // background-color: #FE6148;
+//     // position: absolute;
+//     // top: 0;
+//     // left: 0;
+//     // width: 100%;
+//     // height: 100%;
+//     // opacity: 0;
+    
+//    }
+//    &__type:hover::after {
+//     opacity: 0.5;
+//    }
    
   
     &__img {
-        background: none;
         display: block;
         width: 100%;
     }
@@ -42,12 +41,18 @@
     &__link {
         text-decoration: none;
         color: #FFF;
+        cursor: pointer;
     }
     &__sircl {
         transform: rotate(-90deg);
     }
     
 
+}
+
+.overlay {
+    background-color: rgba(255, 0, 0, 0.24);
+    
 }
 
 @media screen and (max-width: 767px) {

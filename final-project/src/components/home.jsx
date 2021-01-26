@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/grid.scss'
 import '../styles/home.scss'
-
+import { Link } from "react-router-dom";
 
 
 export class Home extends React.Component {
@@ -16,7 +16,7 @@ export class Home extends React.Component {
                         <h1 className="home__title">JOEY DIXON</h1>
                         <h3 className="home__subt">TRAINING WITH A WORLD CHAMPION</h3>
 
-                        <a className="home__btn" href="http://">Book Now</a>
+                        <Link className="home__btn" to="/book">Book Now</Link>
                     </div>
                 </div>
 

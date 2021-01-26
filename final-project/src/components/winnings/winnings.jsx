@@ -1,13 +1,13 @@
 import React from 'react';
 import '../../styles/winnings.scss';
 import '../../styles/grid.scss';
-
+import { Link } from "react-router-dom";
 import { WinInfo } from './winnings-info'
 import { WinGallery } from './winnings-gallery'
 
 export class Winnings extends React.Component {
     render() {
-        const { winData, mouseEnter, mouseLeave, opacity } = this.props;
+        const { winData } = this.props;
         return (
             <div className="winnings">
                 <div className="winnings-info">
@@ -27,7 +27,7 @@ export class Winnings extends React.Component {
                 <div className="winnings-start">
                     <div className="winnings-start__conteiner">
                         <h1 className="winnings-start__title">START TRAINING TODAY</h1>
-                        <a className="winnings-start__link" href="http://">Book a Session</a>
+                        <Link className="winnings-start__link" to="/book" >Book a Session</Link>
                     </div>
                 </div>
                 <div className="winnings-gallery">
@@ -36,9 +36,7 @@ export class Winnings extends React.Component {
                             return <WinGallery
                                 {...pic}
                                 key={pic.id}
-                                mouseEnter={() => mouseEnter(pic.id)}
-                                mouseLeave={() => mouseLeave(pic.id)}
-                                opacity={opacity}
+
                             />
                         })}
                     </ul>

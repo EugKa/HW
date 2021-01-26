@@ -31,7 +31,8 @@ export class App extends React.Component {
 
     state = {
         activeMenu: false,
-        opacity: 0,
+
+
 
         data: {
             winnings: {
@@ -70,15 +71,7 @@ export class App extends React.Component {
         })
     }
 
-    mouseEnter = () => {
-        this.setState({ opacity: 1 })
-        console.log('enter');
-    }
 
-    mouseLeave = () => {
-        this.setState({ opacity: 0 })
-        console.log('leave');
-    }
 
 
     render() {
@@ -87,7 +80,8 @@ export class App extends React.Component {
             navList += ' active'
         }
 
-        const { data, opacity } = this.state;
+
+        const { data } = this.state;
 
         return (
             <Router>
@@ -117,14 +111,15 @@ export class App extends React.Component {
                     <Switch>
                         <Route exact path="/">
                             <Home name="home" />
-                            <Traning id="traning" />
+                            <Traning
+                                id="traning"
+
+                            />
                             <About name="about" />
                             <Winnings
                                 id="winnings"
                                 winData={data.winnings}
-                                mouseEnter={this.mouseEnter}
-                                mouseLeave={this.mouseLeave}
-                                opacity={opacity}
+
                             />
                             <Studio id='studio' />
                             <Mobile name="mobile" />
