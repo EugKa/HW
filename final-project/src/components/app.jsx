@@ -15,7 +15,7 @@ import {
 
 
 import { Home } from './home'
-import { Traning } from './traning'
+import { Traning } from './traning/traning'
 import { About } from './about'
 import { Winnings } from './winnings/winnings'
 import { Studio } from './studio'
@@ -35,6 +35,10 @@ export class App extends React.Component {
 
 
         data: {
+            tranings: [
+                { id: 1, title: "BEGINNERS", image: "https://static.wixstatic.com/media/ff6bf6_ad881f0e977347c8912530d98da3f632.jpg/v1/fill/w_640,h_452,al_c,q_80,usm_0.66_1.00_0.01/ff6bf6_ad881f0e977347c8912530d98da3f632.webp", sircl: "https://static.wixstatic.com/media/ff6bf6_40e4464af2d14b6097571d81bb91f384~mv2.png/v1/fill/w_51,h_51,al_c,q_85,usm_0.66_1.00_0.01/ff6bf6_40e4464af2d14b6097571d81bb91f384~mv2.webp" },
+                { id: 2, title: "PROFESSIONALS", image: "https://static.wixstatic.com/media/ff6bf6_8945ebc2d7b04e76a872928617266cf5.jpg/v1/fill/w_640,h_452,al_c,q_80,usm_0.66_1.00_0.01/ff6bf6_8945ebc2d7b04e76a872928617266cf5.webp", sircl: "https://static.wixstatic.com/media/ff6bf6_40e4464af2d14b6097571d81bb91f384~mv2.png/v1/fill/w_51,h_51,al_c,q_85,usm_0.66_1.00_0.01/ff6bf6_40e4464af2d14b6097571d81bb91f384~mv2.webp" }
+            ],
             winnings: {
                 winInfo: [
                     { id: 1, title: "15", subt: "15 YEARS OF BOXING EXPERIENCE" },
@@ -113,7 +117,7 @@ export class App extends React.Component {
                             <Home name="home" />
                             <Traning
                                 id="traning"
-
+                                traningData={data.tranings}
                             />
                             <About name="about" />
                             <Winnings

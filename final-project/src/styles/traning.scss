@@ -1,27 +1,13 @@
 @import './mixins';
 .traning {
    display: flex;
-   &__type {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-   }
-//    &__type: {
-//     // background-color: #FE6148;
-//     // position: absolute;
-//     // top: 0;
-//     // left: 0;
-//     // width: 100%;
-//     // height: 100%;
-//     // opacity: 0;
-    
-//    }
-//    &__type:hover::after {
-//     opacity: 0.5;
-//    }
-   
-  
+}
+
+.traning-type {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &__img {
         display: block;
         width: 100%;
@@ -32,6 +18,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        height: 100%;
+        justify-content: center;        
     }
    
     &__title {
@@ -46,12 +35,34 @@
     &__sircl {
         transform: rotate(-90deg);
     }
+    &__icon {
+        color: #FFF;
+        visibility: hidden;
+        position: absolute;
+        transform: scale(-1, 1);
+       
+    }
+
+    &__icon_right{
+        right: 0;
+    }
+    &__icon_left {
+        left: 0;
+    }
+    &__icon_left:nth-last-of-type(1) {
+        display: none;
+    }
     
-
-}
-
-.overlay {
-    background-color: rgba(255, 0, 0, 0.24);
+    
+    &.active {
+        .traning-type__content {
+            background-color: #fe604877;
+        }
+        .traning-type__icon {
+            visibility: visible;
+        }
+    }
+    
     
 }
 

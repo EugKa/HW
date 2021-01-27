@@ -71,6 +71,7 @@
     &__link {
         text-decoration: none;
         color:rgb(37, 33, 40);
+        height: 100%;
         
     }
     &__img {
@@ -80,12 +81,37 @@
     }
     &__overlay {
         width: 100%;
-        padding: 30px;
         height: 100%;
         position: absolute;
         top: 0;
-        
         background-color: #ffffff87;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        padding: 0 30px
+    }
+    &__text {
+        
+        
+        
+    }
+    &__title {
+        @include font8;
+        font-weight: normal;
+    }
+    &__subt {
+        max-height: 70px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__icon_share {
+        transform: scale(-1, 1);
     }
 }
 

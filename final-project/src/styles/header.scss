@@ -130,9 +130,6 @@
             margin-bottom: 30px;
         }
         &.active {
-            #root {
-                position: fixed;
-            }
             .nav-menu {
                 &__toggle-line {
                     visibility: hidden;

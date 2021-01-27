@@ -5,9 +5,14 @@ import twitter from '../assets/twitter2.png';
 import instagram from '../assets/instagram2.png';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
-import { Link } from "react-scroll";
+import { animateScroll as scroll } from 'react-scroll'
 
 export class Footer extends React.Component {
+
+    scrollToTop = () => {
+        scroll.scrollToTop();
+    }
+
     render() {
         return (
             <footer className="footer">
@@ -52,14 +57,11 @@ export class Footer extends React.Component {
                         <button className="form__btn" type="submit">Submit</button>
                     </form>
                     <div className="footer-form__aside">
-                        <Link activeClass="active"
-                            to="home"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
+                        <button
+                            onClick={this.scrollToTop}
                             className="footer-form__link">
                             <ExpandLessIcon fontSize="large" />
-                        </Link>
+                        </button>
                         <div className="footer-form__created">
                             ©2023 BY JOEY DIXON. PROUDLY CREATED WITH
                         </div>
