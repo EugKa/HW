@@ -3,8 +3,8 @@ import '../../styles/traning.scss'
 import '../../styles/grid.scss'
 import { Link } from "react-router-dom";
 
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+// import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+// import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 export class TraningItem extends React.Component {
     state = {
         isActive: false
@@ -40,8 +40,8 @@ export class TraningItem extends React.Component {
 
 
                     </div>
-                    <ArrowForwardIosIcon className="traning-type__icon traning-type__icon_left" />
-                    <ArrowBackIosIcon className="traning-type__icon traning-type__icon_right" />
+                    {/* <ArrowForwardIosIcon className="traning-type__icon traning-type__icon_left" />
+                    <ArrowBackIosIcon className="traning-type__icon traning-type__icon_right" /> */}
 
                 </div>
             </li>

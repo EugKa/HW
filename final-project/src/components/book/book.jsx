@@ -7,7 +7,6 @@ export class Book extends React.Component {
 
     render() {
         const { bookData } = this.props;
-        console.log(bookData);
         return (
             <div className="book">
                 <h1 className="book__title">

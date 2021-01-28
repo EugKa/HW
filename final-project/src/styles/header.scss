@@ -63,13 +63,13 @@
         justify-content: space-evenly;
     }
     
-    &__item {
+    &__link {
         color: #FFF;
         text-decoration: none;
         
         cursor: pointer;
     }
-    &__item:hover {
+    &__link:hover {
         color: orangered;
     }
     &__login-btn {
@@ -130,6 +130,11 @@
             margin-bottom: 30px;
         }
         &.active {
+            body {
+                position: fixed;
+                width: 100%;
+                overflow: hidden;
+            }
             .nav-menu {
                 &__toggle-line {
                     visibility: hidden;
