@@ -86,7 +86,7 @@
     .footer {
         flex-direction: column;
         align-items: inherit;
-        height: 793px;
+        height: 802px;
         padding: 15px;
     }
     .form {
@@ -94,5 +94,8 @@
         &__input {
             width: 100%;
         }
+    }
+    .footer-contacts {
+        margin-bottom: 20px;
     }
 }

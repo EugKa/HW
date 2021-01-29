@@ -25,7 +25,6 @@
     
     &__item {
         position: relative;
-        border: 1px solid#7d7c7c7a;
         width: 294px;
         margin: 15px;
     }
@@ -43,6 +42,9 @@
         .plans-card__footer {
             background-color: rgba(145, 145, 145, 0.16);
         }
+        .plans-card__footer:nth-child(5) {
+            display: none;
+        }
         
     }
     &__header {
@@ -51,6 +53,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        border: 1px solid#7d7c7c7a;
     }
     
     &__footer {
@@ -61,6 +64,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        border: 1px solid#7d7c7c7a;
     }
     
     &__title {
@@ -102,6 +106,14 @@
     &__privilege {
         padding: 9px 0;
     }
+    &__btn {
+        visibility: hidden;
+        background-color: transparent;
+        color: #a0a0a0;
+        position: absolute;
+        bottom: 0;
+        outline: none;
+    }
 
 }
 
@@ -115,8 +127,46 @@
         &__item {
             width: 100%;
         }
+        &__item:nth-child(1) {
+            .plans-card__footer {
+                .plans-card__privilege:nth-child(4){
+                    display: none;
+                }
+            }
+            
+            .plans-card__footer {
+                .plans-card__privilege:nth-child(4){
+                    display: none;
+                }
+            }
+        }
+        &__item:nth-child(2) {
+            order: -1;
+            .plans-card__footer {
+                .plans-card__privilege:nth-child(4){
+                    display: none;
+                }
+            }
+        }
         &__sum {
             font-size: 44px;
         }
+        &__footer {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.2s;
+            &.active {
+                max-height: 100%;
+                overflow: visible;
+            }
+            
+        }
+        &__btn {
+            visibility: visible;
+            
+        }
+        
     }
+    
 }

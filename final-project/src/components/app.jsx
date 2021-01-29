@@ -13,6 +13,8 @@ import {
     Link
 } from "react-router-dom";
 
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+
 
 import { Home } from './home'
 import { Traning } from './traning/traning'
@@ -23,12 +25,12 @@ import { Mobile } from './mobile'
 import { Footer } from './footer'
 import { Book } from './book/book'
 import { Plans } from './plans/plans'
-
 import { Modal } from './modal/modal'
 
 export class App extends React.Component {
     constructor(props) {
         super(props)
+        this.targetElement = document.querySelector('body');
 
         this.state = {
             activeMenu: false,
@@ -75,20 +77,19 @@ export class App extends React.Component {
 
     updateBodyStyles = () => {
         if (this.state.activeMenu) {
-            document.body.style.overflow = "hidden";
-
+            disableBodyScroll(this.targetElement);
         } else {
-            document.body.style.overflow = "unset";
+            enableBodyScroll(this.targetElement);
         }
     }
+
+
 
     toElement = () => {
         this.setState(
             { activeMenu: false }, this.updateBodyStyles)
 
     }
-
-
 
     render() {
 
@@ -99,10 +100,10 @@ export class App extends React.Component {
         }
 
         const { data } = this.state;
-
+        // style={this.state.activeMenu ? { 'transform': 'translateX(0%)' } : null}
         return (
             <Router>
-                <div className="page" style={this.state.activeMenu ? { 'transform': 'translateX(0%)' } : null}>
+                <div className="page"  >
                     <header className="header">
                         <nav className={navList}>
                             <button onClick={this.toggleSideBar} className="nav-menu__toggle">

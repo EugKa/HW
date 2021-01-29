@@ -28,7 +28,7 @@ export class Modal extends React.Component {
         const { showModal } = this.state;
 
         return (
-            <div className="www">
+            <li className="nav-menu__item">
                 <button
                     className="nav-menu__login-btn"
                     onClick={this.onCancel}>Log in
@@ -47,21 +47,21 @@ export class Modal extends React.Component {
                                         <span className="modal-window__subt_two"> Log In </span>
                                     </div>
                                     <div className="modal-window__links">
-                                        <a className="modal-window__link modal-window__link_facebook" href="http://">
+                                        <button className="modal-window__link modal-window__link_facebook" href="http://">
                                             <img className="modal-window__logo" src={facelog} alt="" />
                                             <div className="modal-window__txt">Sing up with Facebook</div>
-                                        </a>
-                                        <a className="modal-window__link modal-window__link_google" href="http://">
-                                            <img className="modal-window__logo" src={googlelog} alt="" />
-                                            <div>Sing up with Google</div>
-                                        </a>
+                                        </button>
+                                        <button className="modal-window__link modal-window__link_google" href="http://">
+                                            <img className="modal-window__logo modal-window__logo_google" src={googlelog} alt="" />
+                                            <div className="modal-window__txt">Sing up with Google</div>
+                                        </button>
                                     </div>
                                     <div className="modal-window__lines">
                                         <span className="modal-window__line"></span>
                                         <span>or</span>
                                         <span className="modal-window__line"></span>
                                     </div>
-                                    <a className="modal-window__link modal-window__link_email" href="http://">Sing up with email</a>
+                                    <button className="modal-window__link modal-window__link_email" href="http://">Sing up with email</button>
                                 </div>
 
                                 <button
@@ -73,7 +73,7 @@ export class Modal extends React.Component {
                     ) : null
                 }
 
-            </div>
+            </li>
         );
     }
 }

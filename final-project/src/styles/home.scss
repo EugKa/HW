@@ -46,13 +46,13 @@
 
 @media screen and (max-width: 767px) {
     .home {
-        margin-top: -1px;
+        margin-top: 0px;
 
         &__title  {
-            font-size: 48px;
+            font-size: 44px;
         }
         &__subt {
-            font-size: 23px;
+            font-size: 20px;
             text-align: center;
         } 
     }

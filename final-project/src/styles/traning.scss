@@ -67,6 +67,10 @@
 }
 
 @media screen and (max-width: 767px) {
-    
+    .traning-type {
+        &__title {
+            font-size: 28px;
+        }
+    }
     
 }

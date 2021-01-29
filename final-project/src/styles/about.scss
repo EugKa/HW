@@ -39,13 +39,13 @@
     .about {
       
     &__img {
-        
-        // height: 707px;
+        height: 707px;
         object-fit: cover;
-        
+        object-position: 50% 50%;
     }
         &__content {
             margin: 0;
+            
             left: 15px;
             line-height: 1.5em;
             letter-spacing: 0.02em;

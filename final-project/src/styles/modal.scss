@@ -47,6 +47,9 @@
         text-decoration: none;
         cursor: pointer;
         color: #FFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     &__link_facebook {
         background-color: #3b5998;
@@ -74,8 +77,8 @@
     }
     &__btn-cancel {
         position: fixed;
-        top: 60px;
-        right: 60px;
+        top: 40px;
+        right: 90px;
         background: none;
         outline: none;
         cursor: pointer;
@@ -84,5 +87,12 @@
     &__logo {
         width: 28px;
         height: 28px;
+    }
+    &__logo_google {
+        background-color: #FFF;
+        border-radius: 2px;
+    }
+    &__txt {
+        width: 100%;
     }
 }

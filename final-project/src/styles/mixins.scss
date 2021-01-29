@@ -19,6 +19,14 @@
 @mixin backColorDark {
     background-color: rgba(37,33,40,1);
 }
+@mixin btnBlackColor {
+    background-color: rgba(37,33,40,1);
+    color: rgba(254,97,72,1);
+}
+@mixin btnOrangekColor {
+    color: rgba(37,33,40,1);
+    background-color: rgba(254,97,72,1);
+}
 
 @mixin font1 {
     font-family: 'Oswald', sans-serif; 
