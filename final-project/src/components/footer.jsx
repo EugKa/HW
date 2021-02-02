@@ -13,6 +13,10 @@ export class Footer extends React.Component {
         scroll.scrollToTop();
     }
 
+    handleClick = (e) => {
+        e.preventDefault()
+    }
+
     render() {
         return (
             <footer className="footer">
@@ -54,7 +58,7 @@ export class Footer extends React.Component {
                         <input className="form__input form__input_email" type="text" placeholder="Email" />
                         <input className="form__input form__input_subject" type="text" placeholder="Subject" />
                         <textarea className="form__input  form__input_massage" type="text" placeholder="Massage" />
-                        <button className="form__btn" type="submit">Submit</button>
+                        <button className="form__btn" type="submit" onClick={this.handleClick}>Submit</button>
                     </form>
                     <div className="footer-form__aside">
                         <button

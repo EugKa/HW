@@ -1,7 +1,10 @@
 import React from 'react'
 import '../styles/studio.scss'
 export class Studio extends React.Component {
+
+
     render() {
+
         return (
             <div className="studio">
                 <img className="studio__img" src="https://static.wixstatic.com/media/ff6bf6_c2d84b9ac6114ab7a852ba02cb5f7910.jpg/v1/fill/w_1253,h_783,al_c,q_85/ff6bf6_c2d84b9ac6114ab7a852ba02cb5f7910.webp" alt="" />

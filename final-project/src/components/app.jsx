@@ -27,10 +27,13 @@ import { Book } from './book/book'
 import { Plans } from './plans/plans'
 import { Modal } from './modal/modal'
 
+
+
 export class App extends React.Component {
     constructor(props) {
         super(props)
         this.targetElement = document.querySelector('body');
+
 
         this.state = {
             activeMenu: false,
@@ -86,6 +89,7 @@ export class App extends React.Component {
 
 
     toElement = () => {
+
         this.setState(
             { activeMenu: false }, this.updateBodyStyles)
 
@@ -98,6 +102,7 @@ export class App extends React.Component {
             navList += ' active'
 
         }
+
 
         const { data } = this.state;
         // style={this.state.activeMenu ? { 'transform': 'translateX(0%)' } : null}
@@ -114,7 +119,7 @@ export class App extends React.Component {
                                 <li className="nav-menu__item"><Link onClick={this.toElement} className="nav-menu__link" to="/">TRANING</Link></li>
                                 <li className="nav-menu__item"><Link onClick={this.toElement} className="nav-menu__link" to="/">ABOUT</Link></li>
                                 <li className="nav-menu__item"><Link onClick={this.toElement} className="nav-menu__link" to="/">WINNINGS</Link></li>
-                                <li className="nav-menu__item"><Link onClick={this.toElement} className="nav-menu__link" to="/">THE STUDIO</Link></li>
+                                <li className="nav-menu__item"><Link onClick={this.toElement} className="nav-menu__link" to="/" >THE STUDIO</Link></li>
                                 <li className="nav-menu__item"><Link onClick={this.toElement} className="nav-menu__link" to="/book" >BOOK ONLINE</Link></li>
                                 <li className="nav-menu__item"><Link onClick={this.toElement} className="nav-menu__link" to="/plans" >PLANS</Link></li>
                                 <li className="nav-menu__item"><Link onClick={this.toElement} className="nav-menu__link" to="/" >CONTACT</Link></li>
@@ -147,9 +152,8 @@ export class App extends React.Component {
                             <Plans plansData={data.plans} />
                         </Route>
                     </Switch>
-
-
                     <Footer id="footer" />
+
                 </div>
             </Router>
         )

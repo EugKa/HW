@@ -6,6 +6,7 @@ import { WinInfo } from './winnings-info'
 import { WinGallery } from './winnings-gallery'
 
 export class Winnings extends React.Component {
+
     render() {
         const { winData } = this.props;
         return (
