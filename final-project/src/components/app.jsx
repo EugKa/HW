@@ -16,6 +16,7 @@ import {
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 
+
 import { Home } from './home'
 import { Traning } from './traning/traning'
 import { About } from './about'
@@ -89,12 +90,11 @@ export class App extends React.Component {
 
 
     toElement = () => {
-
         this.setState(
             { activeMenu: false }, this.updateBodyStyles)
 
     }
-
+    
     render() {
 
         let navList = 'nav-menu'
@@ -105,7 +105,6 @@ export class App extends React.Component {
 
 
         const { data } = this.state;
-        // style={this.state.activeMenu ? { 'transform': 'translateX(0%)' } : null}
         return (
             <Router>
                 <div className="page"  >
@@ -130,18 +129,18 @@ export class App extends React.Component {
 
                     <Switch>
                         <Route exact path="/">
-                            <Home id="home" />
+                            <Home name="home" />
                             <Traning
-                                id="traning"
+                                name="traning"
                                 traningData={data.tranings}
                             />
-                            <About id="about" />
+                            <About name="about" />
                             <Winnings
-                                id="winnings"
+                                name="winnings"
                                 winData={data.winnings}
 
                             />
-                            <Studio id='studio' />
+                            <Studio name='studio' />
                             <Mobile id="mobile" />
                         </Route>
 
