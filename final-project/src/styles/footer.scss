@@ -66,6 +66,24 @@
         margin-bottom: 10px;
         height: 38px;
         padding: 3px 3px 3px 12px;
+        outline: none;
+    }
+    &__input:focus {
+        border: 1px solid black;
+    }
+    &__input_error {
+        background-color: #fe6148;
+        color: black;
+        width: 431px;
+        margin-bottom: 10px;
+        height: 38px;
+        padding: 3px 3px 3px 12px;
+        border:1px solid red;
+        outline: none;
+        
+    }
+    &__input_error:focus {
+        border: 1px solid black;
     }
     &__input_massage {
         

@@ -3,21 +3,113 @@ import '../styles/footer.scss';
 import facebook from '../assets/facebook2.png';
 import twitter from '../assets/twitter2.png';
 import instagram from '../assets/instagram2.png';
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess'
 
 import { animateScroll as scroll } from 'react-scroll'
-
+const validEmailRegex =
+    RegExp(/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i);
 export class Footer extends React.Component {
+    state = {
+        name: '',
+        email: '',
+        subject: '',
+        textarea: '',
+        errors: { name: '', email: '', subject: '', textarea: '', },
 
+    }
     scrollToTop = () => {
         scroll.scrollToTop();
     }
 
-    handleClick = (e) => {
+    handleSubmit = (e) => {
         e.preventDefault()
+
+
+        if (this.validateForm(this.state.errors)) {
+            fetch("http://localhost:4000/form", {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                mode: "cors",
+                body: JSON.stringify({
+                    name: this.state.name,
+                    email: this.state.email,
+                    subject: this.state.subject,
+                    textarea: this.state.textarea
+                })
+            })
+                .then(response => response.json())
+                .then((data) => {
+                    this.setState({
+                        name: '',
+                        email: '',
+                        subject: '',
+                        textarea: '',
+                    })
+                    console.log(data);
+                })
+                .catch(error => console.log(error))
+            console.info('Valid Form')
+        } else {
+            console.error('Invalid Form')
+        }
+
+    }
+
+    validateForm = (errors) => {
+        let valid = true;
+        Object.values(errors).forEach((val) => val.length > 0 && (valid = false));
+        return valid
+    }
+
+    handleChange = (e) => {
+        // const name = e.target.name;
+        // const value = e.target.value;
+        // console.log(name, value);
+        // this.setState({
+        //     [name]: value
+        // })
+
+        e.preventDefault();
+        const { name, value } = e.target;
+        let errors = this.state.errors;
+
+        switch (name) {
+            case 'name':
+                errors.name =
+                    value.length < 5
+                        ? "must bu"
+                        : '';
+                break;
+            case 'email':
+                errors.email =
+                    validEmailRegex.test(value)
+                        ? ''
+                        : 'Email is not valid!';
+                break;
+            case 'subject':
+                errors.subject =
+                    value.length < 8
+                        ? 'Subject! must be 5 characters long'
+                        : '';
+                break;
+            case 'textarea': errors.textarea =
+                errors.value < 8
+                    ? 'textarea must be a characters long' : '';
+                break;
+            default:
+                break;
+        }
+
+        this.setState({ errors, [name]: value }, () => {
+            console.log(errors)
+        })
     }
 
     render() {
+        const { errors } = this.state;
         return (
             <footer className="footer">
                 <div className="footer-contacts">
@@ -53,12 +145,47 @@ export class Footer extends React.Component {
                     </div>
                 </div>
                 <div className="footer-form">
-                    <form className="form">
-                        <input className="form__input form__input_name" type="text" placeholder="Name" />
-                        <input className="form__input form__input_email" type="text" placeholder="Email" />
-                        <input className="form__input form__input_subject" type="text" placeholder="Subject" />
-                        <textarea className="form__input  form__input_massage" type="text" placeholder="Massage" />
-                        <button className="form__btn" type="submit" onClick={this.handleClick}>Submit</button>
+                    <form className="form" onSubmit={this.handleSubmit}>
+                        <div className="form__name">
+                            <input className={errors.name.length > 0 ? "form__input_error" : "form__input"}
+                                type="text"
+                                placeholder="Name"
+                                name="name"
+                                value={this.state.name}
+                                onChange={this.handleChange}
+                            />
+
+                        </div>
+                        <div className="form__email">
+                            <input className={errors.email.length > 0 ? "form__input_error" : "form__input"}
+                                type="text"
+                                placeholder="Email"
+                                name="email"
+                                value={this.state.email}
+                                onChange={this.handleChange}
+                            />
+
+                        </div>
+                        <div className="form__subject">
+                            <input className={errors.subject.length > 0 ? "form__input_error" : "form__input"}
+                                type="text"
+                                placeholder="Subject"
+                                name="subject"
+                                value={this.state.subject}
+                                onChange={this.handleChange}
+                            />
+
+                        </div>
+                        <div className="form__textarea">
+                            <textarea className={errors.textarea.length > 0 ? "form__input_error" : "form__input form__input_massage"}
+                                type="text"
+                                placeholder="Massage"
+                                name="textarea"
+                                value={this.state.textarea}
+                                onChange={this.handleChange}
+                            />
+                        </div>
+                        <button className="form__btn" type="submit">Submit</button>
                     </form>
                     <div className="footer-form__aside">
                         <button
