@@ -1,10 +1,24 @@
 import React from 'react';
-import '../../styles/plans.scss'
+import './plans.scss'
 import { PlansItem } from './plans-item'
+import { DataService } from '../DataService/DataService';
 export class Plans extends React.Component {
+    constructor(props) {
+        super(props)
+        this.dataService = new DataService()
+        this.state = {
+            plansData: [],
+        }
+        this.getPlansData()
+    }
+
+    getPlansData() {
+        this.dataService.getPlans().then((plansData) => {
+            this.setState({ plansData })
+        })
+    }
     render() {
-        const { plansData } = this.props;
-        console.log(plansData);
+        const { plansData } = this.state;
         return (
             <div className="plans">
                 <h1 className="plans__title">PLANS & PRICING</h1>

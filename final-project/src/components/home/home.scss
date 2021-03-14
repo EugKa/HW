@@ -1,0 +1,57 @@
+@import "../app/mixins.scss";
+.home {
+  margin-top: 90px;
+  height: 100%;
+
+  &__wrapper {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__img {
+    width: 100%;
+  }
+
+  &__content {
+    color: #fff;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    margin-bottom: 25px;
+    @include font1;
+  }
+  &__subt {
+    margin-bottom: 67px;
+    @include font2;
+    text-align: center;
+  }
+  &__btn {
+    padding: 20px 40px;
+    color: #fe6148;
+    background-color: #252128;
+    text-decoration: none;
+  }
+  &__btn:hover {
+    color: #252128;
+    background-color: #fe6148;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home {
+    margin-top: 0px;
+
+    &__title {
+      font-size: 44px;
+    }
+    &__subt {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+}

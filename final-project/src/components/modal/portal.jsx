@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
-import '../../styles/modal.scss'
+import './modal.scss'
 const modalRoot = document.getElementById('modal');
 
 export class Portal extends React.Component {

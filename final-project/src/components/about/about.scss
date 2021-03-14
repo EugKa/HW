@@ -1,0 +1,56 @@
+@import "../app/mixins.scss";
+.about {
+  position: relative;
+  &__img {
+    display: block;
+    width: 100%;
+    height: 940px;
+    object-fit: cover;
+  }
+  &__content {
+    width: 338px;
+    margin: 0 0 0 calc((100% - 753px) * 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #e8e8e8;
+  }
+  &__title {
+    margin: 88px 0px 49px calc((100% - 338px) * 0.5);
+    @include font4;
+  }
+  &__txt {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+  &__link {
+    text-decoration: none;
+  }
+  &__logo {
+    width: 43px;
+    height: 43px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about {
+    &__img {
+      height: 707px;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+    &__content {
+      margin: 0;
+
+      left: 15px;
+      line-height: 1.5em;
+      letter-spacing: 0.02em;
+    }
+    &__title {
+      font-size: 42px;
+    }
+    &__txt {
+      font-size: 17px;
+    }
+  }
+}

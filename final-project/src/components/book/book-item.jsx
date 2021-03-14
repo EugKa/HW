@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/book.scss'
+import './book.scss'
 
 export class BookItem extends React.Component {
     render() {

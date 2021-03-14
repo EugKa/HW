@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../../styles/modal.scss'
+import './modal.scss'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import facelog from '../../assets/facelog.png';
 import googlelog from '../../assets/googlelog.png';

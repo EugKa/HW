@@ -1,8 +1,9 @@
 import React from 'react';
-import '../../styles/winnings.scss';
-import '../../styles/grid.scss';
+import './winnings.scss';
+import '../app/grid.scss'
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import ReplyIcon from '@material-ui/icons/Reply';
+
 
 export class WinGallery extends React.Component {
     state = {

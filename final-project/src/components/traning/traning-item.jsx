@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../styles/traning.scss'
-import '../../styles/grid.scss'
+import './traning.scss'
+import '../app/grid.scss'
 import { Link } from "react-router-dom";
 
 // import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';

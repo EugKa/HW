@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/plans.scss';
+import './plans.scss';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 export class PlansItem extends React.Component {
