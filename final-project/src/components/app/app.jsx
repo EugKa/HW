@@ -3,11 +3,9 @@ import './bace.scss';
 import './header.scss';
 
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Switch,
     Route,
-    Link as RouteLink,
-    Redirect
 } from "react-router-dom";
 
 // import { Link, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
@@ -28,7 +26,7 @@ import { Book } from '../book/book'
 import { Plans } from '../plans/plans'
 
 import { Header } from '../header/header';
-import { routes, ROUTES_URL } from './routes';
+import { ROUTES_URL } from './routes';
 
 
 export class App extends React.Component {
@@ -36,7 +34,7 @@ export class App extends React.Component {
     render() {
         return (
             <Router>
-                <div className="page"  >
+                <div className="page">
                     <Header />
                     <Switch>
                         <Route exact path={ROUTES_URL.DEFAULT}>
@@ -51,9 +49,12 @@ export class App extends React.Component {
                         <Route path={ROUTES_URL.PLANS} render={() => <Plans />} />
                     </Switch>
 
-                    <Route path={ROUTES_URL.DEFAULT} render={() => <Footer />} />
+                    <Footer />
+
                 </div>
             </Router>
+
+
 
 
         )

@@ -63,7 +63,7 @@ export const routes = [
         // render:() => <Plans/>
     },
     {   
-        path: ROUTES_URL.DEFAULT,
+        // path: ROUTES_URL.DEFAULT,
         title: 'CONTACT',
         name: 'footer',
         isScrolled:true,

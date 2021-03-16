@@ -1,6 +1,10 @@
 import React from 'react';
 import './plans.scss';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import { ROUTES_URL } from '../app/routes';
+import {
+    Link as RouteLink,
+} from "react-router-dom";
 
 export class PlansItem extends React.Component {
     state = {
@@ -34,7 +38,7 @@ export class PlansItem extends React.Component {
                         <div className="plans-card__class">{clasz}</div>
                         <div className="plans-card__valid">{valid}</div>
                     </li>
-                    <a href="http://" className="plans-card__link">{btnTxt}</a>
+                    <RouteLink to={ROUTES_URL.DEFAULT} className="plans-card__link">{btnTxt}</RouteLink>
                 </ul>
                 <ul className={clazz}>
                     <li className="plans-card__privilege">{privilege1}</li>

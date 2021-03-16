@@ -1,4 +1,8 @@
 import React from 'react';
+import { ROUTES_URL } from '../app/routes';
+import {
+    Link as RouteLink,
+} from "react-router-dom";
 import './book.scss'
 
 export class BookItem extends React.Component {
@@ -10,7 +14,7 @@ export class BookItem extends React.Component {
                 <div className="book__wrapper">
                     <div className="book__type">{title}</div>
                     <div className="book__price">{price}</div>
-                    <a className="book__link" href="http://">{text}</a>
+                    <RouteLink className="book__link" to={ROUTES_URL.DEFAULT}>{text}</RouteLink>
                 </div>
             </li>
         )
